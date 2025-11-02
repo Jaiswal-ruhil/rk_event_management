@@ -1,8 +1,8 @@
 const CACHE_NAME = 'event-manager-v1';
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/manifest.webmanifest'
+  '/rk_event_management/',
+  '/rk_event_management/index.html',
+  '/rk_event_management/manifest.webmanifest'
 ];
 
 self.addEventListener('install', (event) => {

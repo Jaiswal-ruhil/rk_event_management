@@ -21,6 +21,21 @@
 <body>
   <div id="root"></div>
 
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/rk_event_management/service-worker.js', {
+          scope: '/rk_event_management/'
+        }).then(registration => {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  </script>
   <script type="text/babel">
     const { useState, useEffect } = React;
 
